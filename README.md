@@ -21,7 +21,7 @@
 5.  As a user, I want the website to be mobile-friendly so that I can access it easily on my smartphone
 6.  As a user, I want to see current weather updates.
 7.  As a user, I want to share the news in social media .
-8.  As a registered user, I want to save articles to a bookmark list so that I can read them later.
+8.  As a user, I want to save articles to a bookmark list so that I can read them later.
 
 
 **Collaborators:**
