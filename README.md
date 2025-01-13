@@ -12,7 +12,7 @@
 *   AngularJS 
   
 
-**User Stories:** (8 Total - 4 Per Developer)
+**User Stories:** 
 
 1.  As a user, I want to view the latest news on the homepage so that I can stay updated with current events.
 2.  As a user, I want to filter news by categories (e.g., politics, sports, technology) so that I can find relevant articles quickly.
