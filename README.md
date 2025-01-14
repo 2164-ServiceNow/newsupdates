@@ -9,7 +9,9 @@
 *   HTML
 *   CSS
 *   JavaScript
-*   AngularJS 
+*   AngularJS
+    (i) For News Update - https://newsapi.org/
+    (ii)For weather Update -https://openweathermap.org/api
   
 
 **User Stories:** 
