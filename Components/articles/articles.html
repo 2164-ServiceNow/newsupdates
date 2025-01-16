@@ -1,0 +1,23 @@
+<!-- <!DOCTYPE html>
+<html lang="en" ng-app="newsApp">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tesla News</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.2/angular.min.js"></script>
+    <script src="searchBar.js"></script>
+</head>
+<body ng-controller="NewsController"> -->
+    <div ng-controller="NewsController">
+    <h1>Tesla News</h1>
+    <div ng-if="loading">Loading...</div>
+    <div ng-if="error">{{ error }}</div>
+    <ul>
+        <li ng-repeat="article in articles">
+            <h2>{{ article.title }}</h2>
+            <p>{{ article.description }}</p>
+            <a href="{{ article.url }}" target="_blank">Read more</a>
+        </li>
+    </ul>
+</body>
+</html>
