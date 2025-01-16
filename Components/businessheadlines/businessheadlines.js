@@ -7,7 +7,7 @@ app.controller('NewsController', ['$scope', '$http', function($scope, $http) {
 
     // Replace the API key below with your own
     const apiKey = '8e192d77108f47b5b37ff9f372260d66';
-    const apiUrl = `https://newsapi.org/v2/everything?q=tesla&from=2024-12-16&sortBy=publishedAt&apiKey=${apiKey}`;
+    const apiUrl = `https://newsapi.org/v2/top-headlines?country=us&category=business&apiKey=${apiKey}`;
 
     $http.get(apiUrl)
         .then(function(response) {

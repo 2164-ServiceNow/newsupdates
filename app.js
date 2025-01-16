@@ -49,7 +49,7 @@ app.config(function ($routeProvider, $locationProvider) {
   // Define the routes
   $routeProvider
     .when('/login', {
-      templateUrl: 'newsupdates/Components/articles/articles.html',
+      templateUrl: 'newsupdates/Components/businessheadlines/businessheadlines.html',
       controller: 'NewsController',
     })
     // .when('/register', {
