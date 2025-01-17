@@ -1,0 +1,11 @@
+<div class="weather-widget" ng-if="!loading">
+    <h2>Current Weather</h2>
+    <div ng-if="error" class="error">{{ error }}</div>
+    <div ng-if="!error">
+        <p><strong>Location:</strong> {{ weather.location }}</p>
+        <p><strong>Temperature:</strong> {{ weather.temperature }}°C</p>
+        <p><strong>Condition:</strong> {{ weather.condition }}</p>
+        <img ng-src="{{ weather.icon }}" alt="Weather Icon">
+    </div>
+</div>
+<div ng-if="loading">Loading weather data...</div>

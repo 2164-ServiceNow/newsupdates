@@ -1,4 +1,4 @@
-// var app = angular.module('newsApp', []);
+ //var app = angular.module('newsApp', []);
 
 app.controller('NewsController', ['$scope', '$http', function($scope, $http) {
     $scope.loading = true;

@@ -37,21 +37,29 @@
 
 
 
-var app = angular.module('newsUpdatesApp', ['ngRoute']);
+var app = angular.module('newsUpdatesApp', ['ngRoute','navbar']);
 
 app.config(function ($routeProvider, $locationProvider) {
-  // Enable HTML5 Mode (no hash in URL)
+  
   $locationProvider.html5Mode({
-    enabled: true,   // Enable HTML5 Mode
-    requireBase: false // Disable base tag requirement
+    enabled: true,   
+    requireBase: false 
   });
 
-  // Define the routes
+  
   $routeProvider
-    .when('/login', {
+  .when('/nav', {
+    templateUrl: 'newsupdates/Components/nav/nav.html',
+    controller: 'navbar',
+  })
+    .when('/bussinessheadlines', {
       templateUrl: 'newsupdates/Components/businessheadlines/businessheadlines.html',
       controller: 'NewsController',
     })
+    .when('/weather', {
+      templateUrl: 'newsupdates/Components/weather/weather.html',
+      controller: 'WeatherController',
+  })
     // .when('/register', {
     //   templateUrl: 'components/register/register.html',
     //   controller: 'RegisterController',
@@ -61,6 +69,6 @@ app.config(function ($routeProvider, $locationProvider) {
     //   controller: 'HomeController',
     // })
     .otherwise({
-      redirectTo: '/login',
+      redirectTo: '/nav',
     });
 });
