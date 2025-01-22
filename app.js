@@ -52,15 +52,17 @@ app.config(function ($routeProvider, $locationProvider) {
       templateUrl: 'newsupdates/Components/businessheadlines/businessheadlines.html',
       controller: 'NewsController',
     })
-    // .when('/register', {
-    //   templateUrl: 'components/register/register.html',
-    //   controller: 'RegisterController',
-    // })
-    // .when('/home', {
-    //   templateUrl: 'components/home/home.html',
-    //   controller: 'HomeController',
-    // })
+    .when('/sportsnews', {
+      templateUrl: 'newsupdates/Components/sportsnews/sportsnews.html',
+      controller: 'sportsController',
+    })
+
+    .when('/technologynews', {
+      templateUrl: 'newsupdates/Components/technologynews/technologynews.html',
+      controller: 'myController',
+    })
+  
     .otherwise({
-      redirectTo: '/login',
+      redirectTo: '/sportsnews',
     });
 });

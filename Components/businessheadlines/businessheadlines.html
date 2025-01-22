@@ -8,7 +8,7 @@
     <script src="searchBar.js"></script>
 </head>
 <body ng-controller="NewsController"> -->
-    <div ng-controller="NewsController">
+    <!-- <div ng-controller="NewsController">
     <h1>Top business headlines in the US right now</h1>
     <div ng-if="loading">Loading...</div>
     <div ng-if="error">{{ error }}</div>
@@ -19,5 +19,20 @@
             <a href="{{ article.url }}" target="_blank">Read more</a>
         </li>
     </ul>
-</body>
-</html>
+    </div> -->
+<!-- </html> -->
+
+<div ng-controller="NewsController" class="news-container">
+    
+    <h1 class="headline">Top business headlines in the US right now</h1>
+    
+    <div class="loading" ng-if="loading">Loading...</div>
+    <div class="error" ng-if="error">{{ error }}</div>
+    <ul class="articles-grid">
+        <li class="article-item" ng-repeat="article in articles">
+            <h2 class="article-title">{{ article.title }}</h2>
+            <p class="article-description">{{ article.description }}</p>
+            <a class="article-link" href="{{ article.url }}" target="_blank">Read more</a>
+        </li>
+    </ul>
+</div>

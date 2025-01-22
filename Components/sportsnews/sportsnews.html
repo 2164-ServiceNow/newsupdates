@@ -1,0 +1,16 @@
+<body ng-controller="sportsController">
+    <div class="container">
+        <h1>Latest Sports News</h1>
+        <div class="news-item" ng-repeat="item in sportsNews">
+            <div class="news-image">
+                <img ng-src="{{item.image_url}}" alt="news image">
+            </div>
+            <div class="news-content">
+                <h2>{{item.title}}</h2>
+                <p><strong>Published:</strong> {{item.published | date:'short'}}</p>
+                <p>{{item.content | limitTo: 150}}...</p>
+                <a href="{{item.source_url}}" target="_blank">Read more</a>
+            </div>
+        </div>
+    </div>
+</body>
