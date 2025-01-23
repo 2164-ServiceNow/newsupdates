@@ -1,0 +1,108 @@
+/* General Styles */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+}
+
+ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    width: 100%;
+}
+
+/* Style for each article item */
+li {
+    background-color: white;
+    margin: 15px 0;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+}
+
+/* Flexbox to arrange image and text */
+li .article-content {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    gap: 20px; /* Space between image and text */
+}
+
+/* Style for the image */
+.article-image {
+    width: 150px;  /* Set image size */
+    height: auto;  /* Maintain aspect ratio */
+    border-radius: 8px;  /* Optional: add rounded corners */
+    object-fit: cover;  /* Ensure image covers the area without distorting */
+}
+
+/* Text content */
+.article-content h2 {
+    font-size: 18px;
+    margin: 0;
+    font-weight: bold;
+    color: #333;
+}
+
+.article-content p {
+    font-size: 14px;
+    color: #666;
+    margin: 10px 0;
+}
+
+/* Link styling */
+a {
+    text-decoration: none;
+    color: #1e90ff;
+    font-weight: bold;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+/* For smaller screens (responsive design) */
+@media screen and (max-width: 768px) {
+    li {
+        flex-direction: column; /* Stack items vertically */
+        text-align: center;
+    }
+
+    .article-content {
+        flex-direction: column; /* Stack image and text vertically */
+        align-items: center;
+    }
+
+    .article-image {
+        width: 100%;  /* Image takes full width on smaller screens */
+        max-width: 300px;  /* Limit the image width */
+    }
+
+    .article-content h2 {
+        font-size: 16px;
+    }
+
+    .article-content p {
+        font-size: 12px;
+    }
+}
+.bookmark-btn {
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    margin-top: 10px;
+}
+
+.bookmark-btn img {
+    width: 30px;
+    height: 30px;
+}
+
+.bookmarked {
+    color: red;  /* For example, if the article is bookmarked */
+}

@@ -24,8 +24,6 @@
 6.  As a user, I want to see current weather updates.
 7.  As a user, I want to share the news in social media .
 8.  As a user, I want to save articles to a bookmark list so that I can read them later.
-
-
 **Collaborators:**
 
 *   [S.Gracious Victoria] - GitHub Username: grace170998

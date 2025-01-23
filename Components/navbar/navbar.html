@@ -2,7 +2,8 @@
     <div class="navbar-content">
         
         <div class="navbar-logo">
-            <img src="newsupdates/Components/navbar/newslogo.jpg" alt="Logo" class="logo-icon">
+            <a href="index.html">
+            <img src="/newsupdates/Components/navbar/newslogo.jpg" alt="Logo" class="logo-icon"></a>
             <span class="logo-text">News Update</span>
         </div>
 
@@ -26,13 +27,15 @@
                 
             </a>
             <button class="navbar-option">
+                <a ng-href="/sportsnews">
                 <img src="path-to-sign-icon.png" alt="SPORTS">
+                </a>
                 
             </button>
-            <button class="navbar-option">
-                <img src="path-to-filter-icon.png" alt="TECHNOLOGY">
-                
-            </button>
+            <a ng-href="/technology" class="navbar-option">
+                <img src="path-to-filter-icon.png" alt="Technology">
+            </a>
+            <a ng-href="/bookmarks" class="navbar-option">Read Later</a>
         </div>
     </div>
 </nav>

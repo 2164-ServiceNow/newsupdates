@@ -1,0 +1,41 @@
+<!-- <div ng-controller="SportsNewsController">
+    <h1>{{ title }}</h1>
+    <ul>
+      <li ng-repeat="newsItem in news">
+        <h3>{{ newsItem.title }}</h3>
+        <p>{{ newsItem.description }}</p>
+        <a href="{{ newsItem.url }}" target="_blank">Read more</a>
+      </li>
+    </ul>
+  
+     Loading Message 
+    <div ng-if="news.length === 0">
+      <p>Loading sports news...</p>
+    </div>
+    
+    Error Message 
+    <div ng-if="news === null">
+      <p>Error loading news. Please try again later.</p>
+    </div>
+  </div> -->
+  <body ng-controller="sportsController">
+    <div class="container">
+        <h1>Latest Sports News</h1>
+        <!-- Grid Container -->
+        <div class="news-grid">
+            <div class="news-item" ng-repeat="item in sportsNews">
+                <div class="news-card">
+                    <div class="news-image">
+                        <img ng-src="{{item.image_url}}" alt="news image">
+                    </div>
+                    <div class="news-content">
+                        <h2>{{item.title}}</h2>
+                        <p><strong>Published:</strong> {{item.published | date:'short'}}</p>
+                        <p>{{item.content | limitTo: 150}}...</p>
+                        <a href="{{item.source_url}}" target="_blank">Read more</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>

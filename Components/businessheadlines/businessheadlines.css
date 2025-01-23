@@ -49,3 +49,9 @@ li a {
 li a:hover {
     text-decoration: underline;
 }
+.article-image {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+    margin-bottom: 15px;
+}

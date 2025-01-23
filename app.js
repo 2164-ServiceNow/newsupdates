@@ -60,6 +60,22 @@ app.config(function ($routeProvider, $locationProvider) {
       templateUrl: 'newsupdates/Components/weather/weather.html',
       controller: 'WeatherController',
   })
+  .when('/nav', {
+    templateUrl: 'newsupdates/Components/currentnews/currentnews.html', // Use the component directly in the template
+    controller:'CurrentNewsController',
+  })
+  .when('/sportsnews', {
+    templateUrl: 'newsupdates/Components/sportsnews/sportsnews.html',
+    controller: 'sportsController',
+  })
+  .when('/technology', {
+    templateUrl: 'newsupdates/Components/technologynews/technologynews.html',
+    controller: 'TechnologyController', // Technology controller for the new module
+  })
+  .when('/bookmarks', {
+    templateUrl: 'newsupdates/Components/bookmarks/bookmarks.html',
+    controller: 'BookmarksController',
+})
     // .when('/register', {
     //   templateUrl: 'components/register/register.html',
     //   controller: 'RegisterController',

@@ -1,0 +1,24 @@
+<!-- technologynews/technologynews.html -->
+<div ng-controller="TechnologyController">
+    <div ng-if="loading" class="loading-spinner">
+        <p>Loading...</p>
+    </div>
+
+    <div ng-if="error" class="error-message">
+        <p>{{ error }}</p>
+    </div>
+
+    <div ng-if="!loading && !error" class="news-container">
+        <div ng-repeat="article in articles" class="news-article">
+            <!-- Display image if available and log URL for debugging -->
+            <div ng-if="article.imageUrl">
+                <p>Image URL: {{ article.imageUrl }}</p> <!-- Debugging line to log the URL -->
+                <img ng-src="{{ article.imageUrl }}" alt="{{ article.title }}" class="news-image" onerror="this.onerror=null;this.src='fallback.jpg';">
+            </div>
+            
+            <h3>{{ article.title }}</h3>
+            <p>{{ article.description }}</p>
+            <a ng-href="{{ article.url }}" target="_blank">Read more</a>
+        </div>
+    </div>
+</div>

@@ -1,28 +1,4 @@
-<!-- <!DOCTYPE html>
-<html lang="en" ng-app="newsApp">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Tesla News</title>
-    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.2/angular.min.js"></script>
-    <script src="searchBar.js"></script>
-</head>
-<body ng-controller="NewsController"> -->
-
-<!-- </body>
-</html> -->
-<div ng-controller="NewsController">
-    <h1>Top business headlines in the US right now</h1>
-
-    <!-- Loading Spinner -->
-    <div ng-if="loading">Loading...</div>
-
-    <!-- Error Message -->
-    <div ng-if="error" class="error-message">
-        {{ error }}
-    </div>
-
-    <!-- Articles List -->
+<div ng-controller="CurrentNewsController">
     <ul>
         <li ng-repeat="article in articles">
             <div class="article-content">
@@ -34,11 +10,9 @@
                     <p>{{ article.description }}</p>
                     <a href="{{ article.url }}" target="_blank">Read more</a>
                 </div>
-                
                 <!-- Bookmark Button -->
-                <button ng-click="bookmarkArticle(article)" ng-disabled="isBookmarked(article)">
-                    <img ng-src="path-to-bookmark-icon.png" alt="Bookmark" />
-                    {{ isBookmarked(article) ? 'Bookmarked' : 'Bookmark' }}
+                <button ng-click="bookmarkArticle(article)" class="bookmark-btn">
+                    <img src="path-to-bookmark-icon.png" alt="Bookmark" />
                 </button>
             </div>
         </li>
@@ -58,14 +32,8 @@
                         <p>{{ bookmark.description }}</p>
                         <a href="{{ bookmark.url }}" target="_blank">Read more</a>
                     </div>
-                    
-                    <!-- Remove Bookmark Button -->
-                    <button ng-click="removeBookmark(bookmark)">
-                        Remove from Bookmarks
-                    </button>
                 </div>
             </li>
         </ul>
     </div>
 </div>
-
