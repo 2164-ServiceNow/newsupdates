@@ -37,21 +37,50 @@
 
 
 
-var app = angular.module('newsUpdatesApp', ['ngRoute']);
+var app = angular.module('newsUpdatesApp', ['ngRoute','navbar']);
 
 app.config(function ($routeProvider, $locationProvider) {
-  // Enable HTML5 Mode (no hash in URL)
+  
   $locationProvider.html5Mode({
-    enabled: true,   // Enable HTML5 Mode
-    requireBase: false // Disable base tag requirement
+    enabled: true,   
+    requireBase: false 
   });
 
-  // Define the routes
+  
   $routeProvider
-    .when('/login', {
-      templateUrl: 'newsupdates/Components/businessheadlines/businessheadlines.html',
+  .when('/nav', {
+    templateUrl: 'newsupdates/Components/navbar/navbar.html',
+    controller: 'navbar',
+  })
+    .when('/bussinessheadlines', {
+      templateUrl: './Components/businessheadlines/businessheadlines.html',
       controller: 'NewsController',
     })
+    .when('/weather', {
+      templateUrl: './Components/weather/weather.html',
+      controller: 'WeatherController',
+  })
+  .when('/nav', {
+    templateUrl: './Components/currentnews/currentnews.html', // Use the component directly in the template
+    controller:'CurrentNewsController',
+  })
+  .when('/sportsnews', {
+    templateUrl: './Components/sportsnews/sportsnews.html',
+    controller: 'sportsController',
+  })
+  .when('/technology', {
+    templateUrl: './Components/technologynews/technologynews.html',
+    controller: 'TechnologyController', // Technology controller for the new module
+  })
+  .when('/bookmarks', {
+    templateUrl: 'Components/bookmarks/bookmarks.html',
+    controller: 'BookmarksController',
+})
+.when('/search', {
+  templateUrl: './Components/search.html', // This is where search results will be displayed
+  controller: 'SearchController',  // This controller will handle the search logic
+})
+
     // .when('/register', {
     //   templateUrl: 'components/register/register.html',
     //   controller: 'RegisterController',
@@ -61,6 +90,6 @@ app.config(function ($routeProvider, $locationProvider) {
     //   controller: 'HomeController',
     // })
     .otherwise({
-      redirectTo: '/login',
+      redirectTo: '/nav',
     });
 });
