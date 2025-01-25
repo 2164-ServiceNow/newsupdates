@@ -8,7 +8,7 @@ angular.module('newsUpdatesApp')
     $scope.bookmarkedArticles = JSON.parse(localStorage.getItem('bookmarkedArticles')) || [];
 
     // API endpoint for latest news
-    const apiKey = 'c47082d716dd4ff9a170ceb76f2b1b8d';
+    const apiKey = '64db235de0d14b1e991f120f04fc9d14';
     const apiUrl = `https://newsapi.org/v2/everything?q=technology&apiKey=${apiKey}`;
 
     // Fetch articles from the API

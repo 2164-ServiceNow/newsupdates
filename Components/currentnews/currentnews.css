@@ -1,108 +1,128 @@
 /* General Styles */
+/* General Styles */
+/* General Styles */
+/* General Styles */
+/* General Styles */
+/* General styles */
+/* General Styles */
+
+/* General Styles */
+/* General Styles */
+/* General Styles */
 body {
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
-    background-color: #f4f4f4;
+    background-color: #f5f5f5;
 }
 
+
+
+/* Article List */
 ul {
-    list-style-type: none;
+    list-style: none;
     padding: 0;
     margin: 0;
-    width: 100%;
 }
 
-/* Style for each article item */
 li {
-    background-color: white;
+    background-color: #fff;
     margin: 15px 0;
     padding: 20px;
     border-radius: 8px;
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
     display: flex;
     flex-direction: column;
-    overflow: hidden;
-}
-
-/* Flexbox to arrange image and text */
-li .article-content {
-    display: flex;
-    flex-direction: row;
     align-items: flex-start;
-    gap: 20px; /* Space between image and text */
 }
 
-/* Style for the image */
+.article-content {
+    display: flex;
+    flex-direction: column;
+}
+
 .article-image {
-    width: 150px;  /* Set image size */
-    height: auto;  /* Maintain aspect ratio */
-    border-radius: 8px;  /* Optional: add rounded corners */
-    object-fit: cover;  /* Ensure image covers the area without distorting */
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
 }
 
-/* Text content */
-.article-content h2 {
-    font-size: 18px;
-    margin: 0;
+.article-text {
+    padding: 15px;
+}
+
+h2 {
+    font-size: 20px;
     font-weight: bold;
+    margin: 0 0 10px 0;
     color: #333;
 }
 
-.article-content p {
-    font-size: 14px;
+p {
+    font-size: 16px;
     color: #666;
-    margin: 10px 0;
+    margin: 0 0 15px 0;
 }
 
-/* Link styling */
-a {
+/* Actions Section */
+.actions {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    align-items: center;
+}
+
+/* Social Sharing Icons */
+.social-sharing a {
+    margin: 0 10px;
+}
+
+.social-sharing img {
+    width: 24px;
+    height: 24px;
+}
+
+/* Read More Link */
+.read-more {
+    color: #007bff;
     text-decoration: none;
-    color: #1e90ff;
     font-weight: bold;
 }
 
-a:hover {
+.read-more:hover {
     text-decoration: underline;
 }
 
-/* For smaller screens (responsive design) */
-@media screen and (max-width: 768px) {
-    li {
-        flex-direction: column; /* Stack items vertically */
-        text-align: center;
-    }
-
-    .article-content {
-        flex-direction: column; /* Stack image and text vertically */
-        align-items: center;
-    }
-
-    .article-image {
-        width: 100%;  /* Image takes full width on smaller screens */
-        max-width: 300px;  /* Limit the image width */
-    }
-
-    .article-content h2 {
-        font-size: 16px;
-    }
-
-    .article-content p {
-        font-size: 12px;
-    }
-}
-.bookmark-btn {
-    background-color: transparent;
+/* Bookmark Buttons */
+.bookmark-btn,
+.remove-bookmark-btn {
+    background: none;
     border: none;
     cursor: pointer;
-    margin-top: 10px;
+    padding: 0;
 }
 
-.bookmark-btn img {
-    width: 30px;
-    height: 30px;
+.bookmark-btn img,
+.remove-bookmark-btn img {
+    width: 24px;
+    height: 24px;
 }
 
-.bookmarked {
-    color: red;  /* For example, if the article is bookmarked */
+/* Responsive Styles */
+@media (max-width: 768px) {
+    .article-content {
+        flex-direction: column;
+    }
+
+    .actions {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+}
+
+/* Hover effects */
+li:hover {
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    transform: translateY(-5px);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
 }

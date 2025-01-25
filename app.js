@@ -49,33 +49,38 @@ app.config(function ($routeProvider, $locationProvider) {
   
   $routeProvider
   .when('/nav', {
-    templateUrl: 'newsupdates/Components/nav/nav.html',
+    templateUrl: 'newsupdates/Components/navbar/navbar.html',
     controller: 'navbar',
   })
     .when('/bussinessheadlines', {
-      templateUrl: 'newsupdates/Components/businessheadlines/businessheadlines.html',
+      templateUrl: './Components/businessheadlines/businessheadlines.html',
       controller: 'NewsController',
     })
     .when('/weather', {
-      templateUrl: 'newsupdates/Components/weather/weather.html',
+      templateUrl: './Components/weather/weather.html',
       controller: 'WeatherController',
   })
   .when('/nav', {
-    templateUrl: 'newsupdates/Components/currentnews/currentnews.html', // Use the component directly in the template
+    templateUrl: './Components/currentnews/currentnews.html', // Use the component directly in the template
     controller:'CurrentNewsController',
   })
   .when('/sportsnews', {
-    templateUrl: 'newsupdates/Components/sportsnews/sportsnews.html',
+    templateUrl: './Components/sportsnews/sportsnews.html',
     controller: 'sportsController',
   })
   .when('/technology', {
-    templateUrl: 'newsupdates/Components/technologynews/technologynews.html',
+    templateUrl: './Components/technologynews/technologynews.html',
     controller: 'TechnologyController', // Technology controller for the new module
   })
   .when('/bookmarks', {
-    templateUrl: 'newsupdates/Components/bookmarks/bookmarks.html',
+    templateUrl: 'Components/bookmarks/bookmarks.html',
     controller: 'BookmarksController',
 })
+.when('/search', {
+  templateUrl: './Components/search.html', // This is where search results will be displayed
+  controller: 'SearchController',  // This controller will handle the search logic
+})
+
     // .when('/register', {
     //   templateUrl: 'components/register/register.html',
     //   controller: 'RegisterController',

@@ -2,27 +2,27 @@ app.controller('TechnologyController', ['$scope', '$http', function($scope, $htt
     $scope.loading = true;
     $scope.error = null;
     $scope.articles = [];
+    $scope.bookmarkedArticles = JSON.parse(localStorage.getItem('bookmarkedArticles')) || []; // Load from localStorage
 
-    // Replace the API key below with your own or manage it server-side
-    const apiKey = 'c47082d716dd4ff9a170ceb76f2b1b8d';  // NewsAPI key
+    const apiKey = '8e192d77108f47b5b37ff9f372260d66'; // NewsAPI key for technology news
     const apiUrl = `https://newsapi.org/v2/top-headlines?country=us&category=technology&apiKey=${apiKey}`;
 
     // Fetching technology news articles
     $http.get(apiUrl)
         .then(function(response) {
-            console.log(response.data);  // Log the whole response to see the articles
-            if (response.data.status === 'ok') {
+            if (response.data.articles && response.data.articles.length) {
                 $scope.articles = response.data.articles;
-                console.log('Articles:', $scope.articles);  // Log the articles to see the imageUrl
             } else {
-                $scope.error = 'No technology articles found.';
+                $scope.error = 'No articles available at the moment.';
             }
         })
         .catch(function(error) {
-            $scope.error = 'Failed to fetch technology news. Please try again later.';
+            $scope.error = 'Failed to fetch news. Please try again later.';
             console.error('Error fetching data:', error);
         })
         .finally(function() {
             $scope.loading = false;
         });
+
+
 }]);

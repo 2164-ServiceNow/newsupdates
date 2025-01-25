@@ -6,7 +6,7 @@
     $scope.articles = [];
     $scope.bookmarkedArticles = JSON.parse(localStorage.getItem('bookmarkedArticles')) || []; // Load from localStorage
 
-    const apiKey = 'c47082d716dd4ff9a170ceb76f2b1b8d';
+    const apiKey = '64db235de0d14b1e991f120f04fc9d14';
     const apiUrl = `https://newsapi.org/v2/top-headlines?country=us&category=business&apiKey=${apiKey}`;
 
     // Fetch articles from the API
@@ -59,11 +59,15 @@
             console.log('Article removed from bookmarks:', article.title);
         }
     };
-
     // Check if an article is already bookmarked
     $scope.isBookmarked = function(article) {
+        if (!article || !article.url) {
+            return false; // Ensure article and article.url are valid before proceeding
+        }
         return $scope.bookmarkedArticles.some(function(bookmark) {
             return bookmark.url === article.url;
         });
     };
+    
+   
 }]);

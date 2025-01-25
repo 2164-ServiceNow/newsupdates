@@ -3,17 +3,15 @@
         
         <div class="navbar-logo">
             <a href="index.html">
-            <img src="/newsupdates/Components/navbar/newslogo.jpg" alt="Logo" class="logo-icon"></a>
+            <img src="./Components/navbar/newslogo.jpg" alt="Logo" class="logo-icon"></a>
             <span class="logo-text">News Update</span>
+        </div>
+        <div class="navbar">
+            <input type="text" ng-model="searchQuery" placeholder="Search news..." />
+            <button ng-click="search()">Search</button>
         </div>
 
         
-        <div class="navbar-search">
-            <input type="text" placeholder="Search for news" ng-model="$ctrl.searchQuery" class="search-input">
-            <button class="search-button">
-                <img src="path-to-search-icon.png" alt="Search">
-            </button>
-        </div>
 
         <!-- Other Options -->
         <div class="navbar-options">

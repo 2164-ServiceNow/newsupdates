@@ -92,3 +92,20 @@ h1 {
   margin-bottom: 20px;
   color: #333;
 }
+/* Bookmark Buttons */
+.bookmark-btn,
+.remove-bookmark-btn {
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 0;
+}
+
+.bookmark-btn img,
+.remove-bookmark-btn img {
+    width: 24px;
+    height: 24px;
+}
+
+
+
